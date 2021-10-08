@@ -7,20 +7,25 @@ import { RestaurantTableComponent } from './components/restaurant-table/restaura
 import { RestaurantInfoComponent } from './components/restaurant-info/restaurant-info.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './router/routes';
+import { RestaurantService } from './services/restaurant.service';
+import { HttpClientModule } from '@angular/common/http';
+import { EvaluationDirective } from './evaluation.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     RestaurantTableComponent,
-    RestaurantInfoComponent
+    RestaurantInfoComponent,
+    EvaluationDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

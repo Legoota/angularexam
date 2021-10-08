@@ -1,5 +1,5 @@
 export interface Eval {
-    username: string;
-    comment: string;
-    star: number;
+    evaluateur: string;
+    commentaire: string;
+    etoiles: number;
 }

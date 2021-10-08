@@ -1,1 +1,19 @@
-<p>restaurant-table works!</p>
+<table>
+    <thead>
+        <tr>
+        <th>Nom</th>
+        <th>Adresse</th>
+        <th>Note moyenne</th>
+        <th>Détails</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let resto of restaurants">
+            <td>{{resto.nom}}</td>
+            <td>{{resto.adresse}}</td>
+            <td *ngIf="!isNan(getMoyenne(resto))">{{getMoyenne(resto)}}</td>
+            <td *ngIf="isNan(getMoyenne(resto))">/</td>
+            <td><a [routerLink]="['/restaurants',resto.id]">Lien</a></td>
+        </tr>
+    </tbody>
+</table>
