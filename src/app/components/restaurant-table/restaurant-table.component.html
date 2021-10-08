@@ -15,7 +15,7 @@
             <td>{{resto.adresse}}</td>
             <td *ngIf="!isNan(getMoyenne(resto))">{{getMoyenne(resto)}}</td>
             <td *ngIf="isNan(getMoyenne(resto))">/</td>
-            <td><a [routerLink]="['/restaurants',resto.id]">Lien</a></td>
+            <td><a [routerLink]="['/restaurant',resto.id]">Lien</a></td>
         </tr>
     </tbody>
 </table>

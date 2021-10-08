@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Restaurant } from '../models/Restaurant';
 
 @Injectable()
@@ -24,5 +24,10 @@ export class RestaurantService {
 
   getData() : Observable<Restaurant[]> {
     return this.restaurants;
+  }
+
+  getRestaurant(id: number) : Observable<Restaurant[]> {
+    return this.getData(); // devrait parcourir les subjects pour renvoyer uniquement le restaurant
+    // avec le bon id mais pas le temps
   }
 }
