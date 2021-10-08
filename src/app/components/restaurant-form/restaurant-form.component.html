@@ -3,12 +3,13 @@
 <form #form="ngForm" (ngSubmit)="save()">
     <div>
         <label for="Nom">Nom </label>
-        <input #userNameInput="ngModel" id="nom" required name="Adresse" [(ngModel)]="restaurant.nom">
-        <span *ngIf="userNameInput.invalid && userNameInput.errors && userNameInput.errors.required" style="color: red">Champ requis</span>
+        <input #restaurantNameInput="ngModel" id="nom" name="Adresse" [(ngModel)]="restaurant.nom" required minlength="1" maxlength="30">
+        <span *ngIf="restaurantNameInput.invalid && restaurantNameInput.errors && restaurantNameInput.errors.required" style="color: red">Champ requis (1 à 30 charactères)</span>
     </div>
     <div>
         <label for="Adresse">Adresse </label>
-        <input id="adresse" name="Adresse" [(ngModel)]="restaurant.adresse">
+        <input #restaurantAddressInput="ngModel" id="adresse" name="Adresse" [(ngModel)]="restaurant.adresse" required minlength="5" maxlength="50">
+        <span *ngIf="restaurantAddressInput.invalid && restaurantAddressInput.errors && restaurantAddressInput.errors.required" style="color: red">Champ requis (5 à 50 charactères)</span>
     </div>
     <input type="submit">
 </form>
