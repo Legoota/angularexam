@@ -1,0 +1,20 @@
+<h3>Ajouter une évaluation</h3>
+
+<form #form="ngForm" (ngSubmit)="save()">
+    <div>
+        <label for="Nom">Nom</label>
+        <input #nameInput="ngModel" id="evaluateur" required name="Evaluateur" [(ngModel)]="eval.evaluateur">
+        <span *ngIf="nameInput.invalid && nameInput.errors && nameInput.errors.required" style="color: red">REQUIS</span>
+    </div>
+    <div>
+        <label for="Commentaire">Commentaire</label>
+        <input #commentInput="ngModel" id="commentaire" name="Commentaire" [(ngModel)]="eval.commentaire">
+        <span *ngIf="commentInput.invalid && commentInput.errors && commentInput.errors.required" style="color: red">REQUIS</span>
+    </div>
+    <div>
+        <label for="Note">Note</label>
+        <input type="number" #noteInput="ngModel" id="note" required name="Note" [(ngModel)]="eval.etoiles">
+        <span *ngIf="noteInput.invalid && noteInput.errors && noteInput.errors.required" style="color: red">REQUIS</span>
+    </div>
+    <input type="submit">
+</form>

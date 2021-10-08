@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
+import { Eval } from 'src/app/models/Eval';
 import { Restaurant } from 'src/app/models/Restaurant';
 import { RestaurantService } from 'src/app/services/restaurant.service';
 
@@ -29,4 +30,7 @@ export class RestaurantInfoComponent implements OnInit {
     })
   }
 
+  public addEval(e: Eval) {
+    this._rs.addEval(this.restaurant,e);
+  }
 }
