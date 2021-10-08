@@ -9,14 +9,12 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './router/routes';
 import { RestaurantService } from './services/restaurant.service';
 import { HttpClientModule } from '@angular/common/http';
-import { EvaluationDirective } from './evaluation.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     RestaurantTableComponent,
-    RestaurantInfoComponent,
-    EvaluationDirective
+    RestaurantInfoComponent
   ],
   imports: [
     BrowserModule,
