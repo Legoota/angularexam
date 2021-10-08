@@ -9,19 +9,23 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './router/routes';
 import { RestaurantService } from './services/restaurant.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RestaurantFormComponent } from './components/restaurant-form/restaurant-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     RestaurantTableComponent,
-    RestaurantInfoComponent
+    RestaurantInfoComponent,
+    RestaurantFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     RouterModule.forRoot(ROUTES),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [RestaurantService],
   bootstrap: [AppComponent]

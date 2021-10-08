@@ -1,0 +1,14 @@
+<h3>Ajouter un restaurant</h3>
+
+<form #form="ngForm" (ngSubmit)="save()">
+    <div>
+        <label for="Nom">Nom </label>
+        <input #userNameInput="ngModel" id="nom" required name="Adresse" [(ngModel)]="restaurant.nom">
+        <span *ngIf="userNameInput.invalid && userNameInput.errors && userNameInput.errors.required" style="color: red">Champ requis</span>
+    </div>
+    <div>
+        <label for="Adresse">Adresse </label>
+        <input id="adresse" name="Adresse" [(ngModel)]="restaurant.adresse">
+    </div>
+    <input type="submit">
+</form>
