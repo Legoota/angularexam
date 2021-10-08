@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RestaurantFormComponent } from './components/restaurant-form/restaurant-form.component';
 import { FormsModule } from '@angular/forms';
 import { EvalFormComponent } from './components/eval-form/eval-form.component';
+import { RestaurantcolorDirective } from './restaurantcolor.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EvalFormComponent } from './components/eval-form/eval-form.component';
     RestaurantTableComponent,
     RestaurantInfoComponent,
     RestaurantFormComponent,
-    EvalFormComponent
+    EvalFormComponent,
+    RestaurantcolorDirective
   ],
   imports: [
     BrowserModule,

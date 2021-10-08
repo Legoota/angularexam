@@ -1,5 +1,15 @@
 # ExamApp
 
+Projet Angular pour l'examen - Krebs Léo
+
+Nota:
+ * On aurait pu faire un répertoire restaurant/ dans les composants, avec un module spécifique de sorte à regrouper
+ * On aurait pu faire une directive à la place d'un ngStyle
+ * Souci pour récupérer uniquement un ```Subject<Restaurant>``` dans getRestaurant(id) au lieu de renvoyer l'intégralité de la liste et récupérer le bon Restaurant dans le composant
+
+
+## Angular CLI info
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 ## Development server

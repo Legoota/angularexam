@@ -11,7 +11,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let resto of restaurants" [ngStyle]="{'background-color': (getMoyenne(resto) > 2) ? 'yellow' : (getMoyenne(resto) < 1) ? 'gray' : ''}">
-            <td>{{resto.nom}}</td>
+            <td restaurantname>{{resto.nom}}</td>
             <td>{{resto.adresse}}</td>
             <td *ngIf="!isNan(getMoyenne(resto))">{{getMoyenne(resto)}}</td>
             <td *ngIf="isNan(getMoyenne(resto))">/</td>
